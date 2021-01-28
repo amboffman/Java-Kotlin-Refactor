@@ -13,17 +13,15 @@ object Repository {
             val userNames: MutableList<String> =
                 ArrayList(users.size)
             for ((firstName, lastName) in users) {
-                var name: String
+                val name: String
                 name = if (lastName != null) {
                     if (firstName != null) {
                         firstName + " " + lastName
                     } else {
                         lastName
                     }
-                } else if (firstName != null) {
-                    firstName
-                } else {
-                    "Unknown"
+                }  else {
+                    firstName ?: "Unknown"
                 }
                 userNames.add(name)
             }
