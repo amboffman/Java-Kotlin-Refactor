@@ -28,8 +28,10 @@ object Repository {
         val user1 = User("Jane", "")
         val user2 = User("John", null)
         val user3 = User("Anne", "Doe")
-        _users.add(user1)
-        _users.add(user2)
-        _users.add(user3)
+        _users.apply {
+            add(user1)
+            add(user2)
+            add(user3)
+        }
     }
 }
