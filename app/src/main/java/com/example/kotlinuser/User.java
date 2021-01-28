@@ -1,5 +1,7 @@
 package com.example.kotlinuser;
 
+import androidx.annotation.Nullable;
+
 public class User {
 
     @Nullable
