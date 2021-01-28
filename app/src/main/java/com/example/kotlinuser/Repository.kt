@@ -8,15 +8,14 @@ object Repository {
         return users
     }
 
-    val formattedUserNames: List<String?>
+    val formattedUserNames: List<String>
         get() {
             val userNames: MutableList<String> =
                 ArrayList(users.size)
             for ((firstName, lastName) in users) {
-                val name: String
-                name = if (lastName != null) {
+                val name = if (lastName != null) {
                     if (firstName != null) {
-                        firstName + " " + lastName
+                        "$firstName $lastName"
                     } else {
                         lastName
                     }
